@@ -26,7 +26,7 @@ def salvar_no_google_sheets(codigo_func, data_hora_str):
 
     client = gspread.service_account_from_dict(creds_dict)
     # Substitua "Nome_Da_Sua_Planilha" pelo nome exato da sua planilha no Google Sheets
-    sheet = client.open("Nome_Da_Sua_Planilha").sheet1
+    sheet = client.open("Banco de Dados: Folha de Ponto").sheet1
 
     sheet.append_row([data_hora_str, codigo_func])
     return True
